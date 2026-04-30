@@ -24,7 +24,7 @@ jobs:
       - env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         run: python bot.py alerts
-         - name: Commit state
+      - name: Commit state
         run: |
           if git diff --quiet state.json; then
             echo "No state changes"
